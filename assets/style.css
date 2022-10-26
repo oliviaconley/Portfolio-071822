@@ -39,6 +39,7 @@ ul {
   font-size: 80px;
   font-weight: bold;
   color: white;
+  text-shadow: 2px 2px 8px black;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -50,7 +51,7 @@ h1, h2 {
   margin: 2%; 
 }
 
-.headshot, .work-list, .contact {
+.headshot, .work-list {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -78,18 +79,51 @@ hr {
   border-top: 1px dotted
 }
 
-.work-list, .contact {
+.work-list {
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
-.main {
+.main, button {
+  display: block;
   width: 100%;
   max-width: 710px;
   height: auto;
   border-radius: 15px;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  margin-top: 0px;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 97%;
+  border-radius: 15px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #0d5743;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.polished-description {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .project-1, .project-3 {
@@ -102,15 +136,18 @@ hr {
 }
 
 button {
-  margin: 5px;
+  margin: 10px;
   border-radius: 12px;
   border: none;
   background-color: #0d5743;
-  padding: 10px 20px
+  padding: 10px 20px;
+  
 }
 
-
-
+.contact {
+  margin: 10px; 
+  text-align: center;
+}
 
 
 
